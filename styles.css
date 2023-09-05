@@ -9,12 +9,13 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: #000;
+  background-color: #f9cdad;
   display: flex;
   flex-wrap: wrap;
   flex-shrink: 1;
   justify-content: center;
   align-items: center;
+ 
 }
 
 
@@ -25,16 +26,17 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(0deg, rgba(255,255,255,1) 4%, rgba(255,5,254,1) 100%);
-  border: 5px solid #fff;
+  background: #fe4365b9;
+  border: 5px solid #fc9d9a;
   font-size: 18px;
+  border-radius: 20px;
 }
 
 fieldset {
   display: flex;
   flex-direction: column;
   padding: 15px;
-  border: 1px solid #000;
+  border: 1px solid #d4d4d4;
   border-radius: 15px;
   background-color: #fff;
 }
@@ -50,6 +52,7 @@ h1 {
   flex-wrap: wrap;
   flex-direction: column;
   font-family: Pacifico, Arial, Helvetica, sans-serif;
+  color: white;
 }
 
 a {
@@ -70,7 +73,7 @@ form {
 }
 
 input {
-  border: 1px solid #000;
+  border: 2px solid #eec6c6;
   border-radius: 50px;
   width: 65vw;
   height: 2rem;
