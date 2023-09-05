@@ -15,7 +15,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     const simRadio = document.getElementById('sim'); // Botão "Sim"
     const naoRadio = document.getElementById('nao'); // Botão "Não"
-    const camposAposNao = document.querySelectorAll('#porc, #notou, #url, #notouLabel, #urlLabel, #nome, #nomeLabel'); // Campos e labels a serem exibidos/ocultados
+    const camposAposNao = document.querySelectorAll('#porc, #notou, #url, #notouLabel, #urlLabel, #nome, #nomeLabel, .bot-set'); // Campos e labels a serem exibidos/ocultados
 
     // Oculta os campos e labels inicialmente
     camposAposNao.forEach(element => {
@@ -40,21 +40,31 @@
   <main>
     <form id="meuFormulario" action="https://formspree.io/f/mleybkqb" method="POST">
       <h1>Cupid <a href="https://youtube.com/shorts/ZBJ7rauYBCQ?si=RSyMgKqKy4k-fKei" style="text-decoration: none;">💘</a></h1>
-      <label id="nmr">Você tem namorado?</label>
-      <div class="escolha">
-        <input type="radio" id="sim" name="resposta" value="Sim">
-        <label for="sim">Sim ⠀⠀⠀⠀⠀⠀⠀🙁</label>
-        <input type="radio" id="nao" name="resposta" value="Ganhamo clã!">
-        <label for="nao"><strong>Não ⠀⠀⠀⠀⠀⠀🥰</strong></label>
-      </div>
-      <label for="nome" id="nomeLabel">Nome:</label>
-      <input type="text" id="nome" name="nome" required style="text-align: center;" placeholder="Amor da minha vida">
-      <label for="porc" id="porc">de <strong>0 a 100</strong>, qual é minha chance com você?</label>
-      <input type="number" id="porc" name="porc" min="0" max="1000" required style="text-align: center;" placeholder="1000">
-      <label for="notou" id="notouLabel">Você notou que eu gosto de você?</label>
-      <input type="text" id="notou" name="notou" required style="text-align: center;" placeholder="KKK Sou pessimo com isso">
-      <label for="url" id="urlLabel">Me manda a <strong>URL</strong> do seu coração?</label>
-      <input type="text" id="url" name="url" style="text-align: center;" placeholder="https://MinhaVida.io">
+      <fieldset class="top-set">
+        <label id="nmr">Você tem namorado?</label>
+        <div class="escolha">
+          <input type="radio" id="sim" name="resposta" value="Sim">
+          <label for="sim">Sim 🙁</label>
+          <input type="radio" id="nao" name="resposta" value="Ganhamo clã!">
+          <label for="nao"><strong>Não 🥰</strong></label>
+        </div>
+      </fieldset>
+      <fieldset class="bot-set">
+        <label for="nome" id="nomeLabel">Nome:</label>
+        <input type="text" id="nome" name="nome" required style="text-align: center;" placeholder="💞">
+      </fieldset>
+      <fieldset class="bot-set">
+        <label for="porc" id="porc">de <strong>0 a 100</strong> quantos <strong>%</strong> dâ para perceber que eu gosto de você?</label>
+        <input type="number" id="porc" name="porc" min="0" max="1000" required style="text-align: center;" placeholder="1000">
+      </fieldset>
+      <fieldset class="bot-set">
+        <label for="notou" id="notouLabel">Se eu disser que estou bastante interessado em você, tenho chance?</label>
+        <input type="text" id="notou" name="notou" required style="text-align: center;" placeholder="KKK Sou pessimo com isso">
+      </fieldset>
+      <fieldset class="bot-set">
+        <label for="url" id="urlLabel">Me manda a <strong>URL</strong> do seu coração?</label>
+        <input type="text" id="url" name="url" style="text-align: center;" placeholder="https://MinhaVida.io">
+      </fieldset>
       <input id="submit" type="submit" value="Enviar">
     </form>
   </main>
